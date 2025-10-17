@@ -8,25 +8,25 @@ body {
 
 @layer base {
   :root {
-    --background: 210 100% 12%; /* Peacock Blue */
-    --foreground: 30 90% 95%; /* Light Gold/Cream */
-    --card: 210 100% 16%;
-    --card-foreground: 30 90% 95%;
-    --popover: 210 100% 12%;
-    --popover-foreground: 30 90% 95%;
-    --primary: 30 100% 60%; /* Saffron/Marigold */
-    --primary-foreground: 20 14.3% 4.1%;
-    --secondary: 210 100% 20%;
-    --secondary-foreground: 30 90% 95%;
-    --muted: 210 100% 20%;
-    --muted-foreground: 30 90% 80%;
-    --accent: 45 100% 51%; /* Gold */
-    --accent-foreground: 210 100% 12%;
+    --background: 350 80% 97%; /* Soft Blush Pink */
+    --foreground: 340 30% 25%; /* Dark Dusty Rose */
+    --card: 350 80% 99%;
+    --card-foreground: 340 30% 25%;
+    --popover: 350 80% 99%;
+    --popover-foreground: 340 30% 25%;
+    --primary: 340 60% 65%; /* Dusty Rose */
+    --primary-foreground: 350 80% 99%;
+    --secondary: 350 70% 92%;
+    --secondary-foreground: 340 30% 25%;
+    --muted: 350 70% 92%;
+    --muted-foreground: 340 25% 45%;
+    --accent: 45 70% 75%; /* Soft Gold */
+    --accent-foreground: 40 30% 15%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 100% 40%;
-    --input: 30 100% 30%;
-    --ring: 30 100% 60%;
+    --border: 350 60% 88%;
+    --input: 350 60% 88%;
+    --ring: 340 60% 65%;
     --radius: 0.8rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -38,25 +38,25 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 210 100% 12%; /* Peacock Blue */
-    --foreground: 30 90% 95%; /* Light Gold/Cream */
-    --card: 210 100% 16%;
-    --card-foreground: 30 90% 95%;
-    --popover: 210 100% 12%;
-    --popover-foreground: 30 90% 95%;
-    --primary: 30 100% 60%; /* Saffron/Marigold */
-    --primary-foreground: 20 14.3% 4.1%;
-    --secondary: 210 100% 20%;
-    --secondary-foreground: 30 90% 95%;
-    --muted: 210 100% 20%;
-    --muted-foreground: 30 90% 80%;
-    --accent: 45 100% 51%; /* Gold */
-    --accent-foreground: 210 100% 12%;
+    --background: 340 10% 15%; /* Darker Dusty Rose */
+    --foreground: 350 70% 95%; /* Light Blush */
+    --card: 340 10% 20%;
+    --card-foreground: 350 70% 95%;
+    --popover: 340 10% 15%;
+    --popover-foreground: 350 70% 95%;
+    --primary: 340 60% 65%; /* Dusty Rose */
+    --primary-foreground: 340 20% 10%;
+    --secondary: 340 10% 25%;
+    --secondary-foreground: 350 70% 95%;
+    --muted: 340 10% 25%;
+    --muted-foreground: 350 70% 80%;
+    --accent: 45 60% 70%; /* Soft Gold */
+    --accent-foreground: 40 30% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 100% 40%;
-    --input: 30 100% 30%;
-    --ring: 30 100% 60%;
+    --border: 340 10% 30%;
+    --input: 340 10% 30%;
+    --ring: 340 60% 65%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -85,7 +85,7 @@ body {
   }
   .gilded-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, #FFD700 50%, hsl(var(--primary)) 100%);
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--primary)) 100%);
     animation: shimmer 5s ease-in-out infinite;
     background-size: 200% 200%;
   }
