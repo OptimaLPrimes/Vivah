@@ -10,7 +10,7 @@ export function HeroSection() {
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center text-center text-white p-4 pt-20">
       <div className="absolute inset-0">
         <video
-          src="https://videos.pexels.com/video-files/853874/853874-hd_1920_1080_25fps.mp4" // Replace with your video
+          src="https://videos.pexels.com/video-files/4124367/4124367-hd_1920_1080_25fps.mp4" // Aurora video
           autoPlay
           loop
           muted
