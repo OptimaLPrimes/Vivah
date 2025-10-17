@@ -25,7 +25,7 @@ export function VenueSection() {
           <div className="grid md:grid-cols-2">
             <div className="p-8 md:p-12 flex flex-col justify-center">
                 <MapPin className="h-10 w-10 text-primary mb-4" />
-                <h3 className="font-headline text-3xl font-bold text-accent mb-2">The Grand Palace</h3>
+                <h3 className="font-headline text-3xl font-bold text-accent mb-2">Vitthalrao Deshmukh Mangal Karyalay and Lawns</h3>
                 <p className="text-lg font-semibold">Royal Orchid Gardens</p>
                 <p className="text-muted-foreground mb-6">123 Wedding Lane, Garden City, Bengaluru, Karnataka 560001</p>
                 
