@@ -34,9 +34,6 @@ export function HeroSection() {
           12th December 2025 | 1:12 PM
         </p>
         <div className="flex gap-4">
-            <Button size="lg" asChild>
-                <Link href="#rsvp">RSVP Now</Link>
-            </Button>
             <Button size="lg" variant="outline" className="bg-transparent text-white border-primary hover:bg-primary/20 hover:text-white" asChild>
                 <Link href="#events">View Events</Link>
             </Button>

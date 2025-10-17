@@ -15,7 +15,6 @@ const navItems = [
   { href: "#venue", label: "Venue" },
   { href: "#gallery", label: "Gallery" },
   { href: "#guestbook", label: "Guestbook" },
-  { href: "#rsvp", label: "RSVP" },
 ];
 
 export function Header() {

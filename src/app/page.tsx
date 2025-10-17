@@ -6,7 +6,6 @@ import { EventsSection } from '@/components/sections/events-section';
 import { VenueSection } from '@/components/sections/venue-section';
 import { GallerySection } from '@/components/sections/gallery-section';
 import { GuestbookSection } from '@/components/sections/guestbook-section';
-import { RsvpSection } from '@/components/sections/rsvp-section';
 import { getGuestbookMessages } from '@/lib/actions';
 import { FloralDivider } from '@/components/floral-divider';
 import { ScrollAnimator } from '@/components/scroll-animator';
@@ -38,10 +37,6 @@ export default async function Home() {
         <FloralDivider />
         <ScrollAnimator>
           <GuestbookSection initialMessages={initialMessages} />
-        </ScrollAnimator>
-        <FloralDivider />
-        <ScrollAnimator>
-          <RsvpSection />
         </ScrollAnimator>
       </main>
       <Footer />
