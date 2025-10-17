@@ -1,9 +1,19 @@
+
+"use client";
+
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { FloralDivider } from "../floral-divider";
+import { useEffect, useState } from "react";
 
 export function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-secondary/30">
         <FloralDivider />
@@ -30,7 +40,7 @@ export function Footer() {
                 </Button>
             </div>
             <p className="text-muted-foreground text-sm">
-                &copy; {new Date().getFullYear()} Vaishnavi & Suraj. All rights reserved.
+                &copy; {year} Vaishnavi & Suraj. All rights reserved.
             </p>
              <p className="text-muted-foreground text-xs mt-2">
                 Crafted with love by Firebase Studio.
