@@ -112,6 +112,11 @@ export default {
           '0%': { transform: 'scale(0.5) translateY(0)', opacity: '0.5' },
           '50%': { transform: 'scale(1) translateY(-15px)', opacity: '1' },
           '100%': { transform: 'scale(0.5) translateY(0)', opacity: '0.5' },
+        },
+        'draw-in-out': {
+          '0%': { transform: 'scale(0)', opacity: '0' },
+          '50%': { transform: 'scale(1.1)', opacity: '1' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
         }
       },
       animation: {
@@ -121,6 +126,7 @@ export default {
         'fade-in-up': 'fade-in-up 1s ease-in-out',
         'breathe': 'breathe 4s ease-in-out infinite',
         'sparkle': 'sparkle 3s ease-in-out infinite',
+        'draw-in-out': 'draw-in-out 1.5s ease-in-out forwards',
       },
     },
   },
