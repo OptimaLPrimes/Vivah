@@ -12,11 +12,11 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
 
       <div className="relative z-10 flex flex-col items-center animate-fade-in-up">
-        <h2 className="font-headline text-4xl md:text-6xl text-background/80 tracking-tight">
+        <h2 className="font-headline text-3xl md:text-4xl text-background/80 tracking-tight mb-4">
           We're Getting Married!
         </h2>
         
-        <div className="my-4">
+        <div className="my-2">
           <AnimatedName name="Vaishnavi & Suraj" />
         </div>
 
@@ -24,7 +24,9 @@ export function HeroSection() {
           12th December 2025 | 1:12 PM
         </p>
 
-        <CountdownTimer date={weddingDate} />
+        <div className="animate-breathe">
+            <CountdownTimer date={weddingDate} />
+        </div>
 
         <div className="flex gap-4 mt-12">
             <Button size="lg" variant="outline" className="bg-transparent text-white border-primary hover:bg-primary/20 hover:text-white" asChild>

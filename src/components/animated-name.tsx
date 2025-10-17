@@ -12,7 +12,7 @@ const NameCharacter = ({ char, index }: { char: string; index: number }) => {
 
   return (
     <svg
-      className="w-10 h-10 md:w-20 md:h-20"
+      className="w-16 h-24 md:w-32 md:h-40"
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -21,14 +21,14 @@ const NameCharacter = ({ char, index }: { char: string; index: number }) => {
         y="50%"
         dy=".35em"
         textAnchor="middle"
-        className={`font-headline text-6xl md:text-9xl font-bold fill-primary drop-shadow-lg ${
+        className={`font-script text-8xl md:text-9xl font-bold fill-primary drop-shadow-lg ${
           isAnimated ? "animate-draw-letter-fill" : ""
         }`}
         style={{ fillOpacity: 0 }}
       >
         <tspan
           className={isAnimated ? "animate-draw-letter" : ""}
-          style={{ stroke: "hsl(var(--primary))", strokeWidth: 1 }}
+          style={{ stroke: "hsl(var(--primary))", strokeWidth: 0.5 }}
         >
           {char}
         </tspan>
@@ -43,7 +43,7 @@ export const AnimatedName = ({ name }: { name: string }) => {
     <div className="flex items-center justify-center flex-wrap">
       {name.split("").map((char, index) =>
         char === " " ? (
-          <div key={index} className="w-4 md:w-8" />
+          <div key={index} className="w-2 md:w-4" />
         ) : (
           <NameCharacter key={index} char={char} index={index} />
         )

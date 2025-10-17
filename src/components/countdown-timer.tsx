@@ -37,15 +37,18 @@ const TimeValue = ({ value, unit }: { value: number; unit: TimeUnit }) => (
 );
 
 export const CountdownTimer = ({ date }: { date: string }) => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(date));
+  const [timeLeft, setTimeLeft] = useState({ Days: 0, Hours: 0, Minutes: 0, Seconds: 0 });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeef_t(date));
+    // Set initial value on client mount to avoid hydration issues
+    setTimeLeft(calculateTimeLeft(date));
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft(date));
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, [date]);
   
   return (
     <div className="flex items-center justify-center gap-4 md:gap-8 p-4 rounded-lg bg-black/20 backdrop-blur-sm">
