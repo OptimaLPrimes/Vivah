@@ -34,6 +34,11 @@ export function GuestbookSection({ initialMessages }: { initialMessages: Guestbo
     initialMessages,
     (state, newMessage: GuestbookEntry) => [newMessage, ...state]
   );
+  
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (state.status === "success") {
@@ -60,7 +65,7 @@ export function GuestbookSection({ initialMessages }: { initialMessages: Guestbo
 
     if (validatedFields.success) {
         addOptimisticMessage({
-            id: window.crypto.randomUUID(),
+            id: isClient ? window.crypto.randomUUID() : 'optimistic-id',
             name: validatedFields.data.name,
             message: validatedFields.data.message,
             createdAt: new Date(),
