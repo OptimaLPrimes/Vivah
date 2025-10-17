@@ -31,7 +31,7 @@ export function VenueSection() {
                 
                 <h4 className="font-bold mb-2 mt-4">Travel Information</h4>
                 <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                    <li>Nearest Airport: Kempegowda International Airport (BLR)</li>
+                    <li>Nearest Airport: Nanded Airport (Nanded)</li>
                     <li>Nearest Railway Station: Bengaluru City Railway Station (SBC)</li>
                     <li>Ample parking available at the venue.</li>
                 </ul>

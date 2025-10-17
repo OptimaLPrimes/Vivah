@@ -9,17 +9,17 @@ body {
 
 @layer base {
   :root {
-    --background: 20 40% 98%; /* Warm Off-white */
+    --background: 35 100% 98%; /* Very Pale Orange */
     --foreground: 25 30% 20%; /* Dark Brown */
-    --card: 20 40% 99%;
+    --card: 35 100% 99%;
     --card-foreground: 25 30% 20%;
-    --popover: 20 40% 99%;
+    --popover: 35 100% 99%;
     --popover-foreground: 25 30% 20%;
-    --primary: 35 100% 58%; /* Saffron/Marigold */
+    --primary: 35 85% 55%; /* Saffron */
     --primary-foreground: 25 30% 10%;
     --secondary: 35 100% 96%;
     --secondary-foreground: 35 90% 30%;
-    --muted: 20 40% 94%;
+    --muted: 35 90% 94%;
     --muted-foreground: 25 30% 40%;
     --accent: 25 95% 60%; /* Bright Orange */
     --accent-foreground: 25 30% 20%;
@@ -145,4 +145,18 @@ body {
     }
   }
 
+  @keyframes sparkle {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5) rotate(180deg);
+    }
+  }
+  
+  .animate-sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+  }
 }
