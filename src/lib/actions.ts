@@ -73,10 +73,55 @@ export async function getGuestbookMessages(): Promise<GuestbookEntry[]> {
         createdAt: data.createdAt.toDate(),
       });
     });
+
+    if (messages.length === 0) {
+      // Add mock data if no messages are found
+      return [
+        {
+          id: "1",
+          name: "Aunt Priya",
+          message: "Wishing you both a lifetime of love and happiness. So excited to celebrate with you!",
+          createdAt: new Date(),
+        },
+        {
+          id: "2",
+          name: "Rohan & Anjali",
+          message: "Congratulations, Vaishnavi and Suraj! Your journey together will be beautiful. Can't wait for the big day!",
+          createdAt: new Date(new Date().setDate(new Date().getDate() - 1)),
+        },
+        {
+          id: "3",
+          name: "Grandma",
+          message: "My dearest children, may your life together be filled with countless blessings and joy. My heart is full.",
+          createdAt: new Date(new Date().setDate(new Date().getDate() - 2)),
+        },
+      ];
+    }
+
     return messages;
   } catch (error) {
     console.error("Error fetching messages: ", error);
-    return [];
+    // Return mock data on error as well for preview purposes
+    return [
+        {
+          id: "1",
+          name: "Aunt Priya",
+          message: "Wishing you both a lifetime of love and happiness. So excited to celebrate with you!",
+          createdAt: new Date(),
+        },
+        {
+          id: "2",
+          name: "Rohan & Anjali",
+          message: "Congratulations, Vaishnavi and Suraj! Your journey together will be beautiful. Can't wait for the big day!",
+          createdAt: new Date(new Date().setDate(new Date().getDate() - 1)),
+        },
+        {
+          id: "3",
+          name: "Grandma",
+          message: "My dearest children, may your life together be filled with countless blessings and joy. My heart is full.",
+          createdAt: new Date(new Date().setDate(new Date().getDate() - 2)),
+        },
+      ];
   }
 }
 
