@@ -60,7 +60,7 @@ export function GuestbookSection({ initialMessages }: { initialMessages: Guestbo
 
     if (validatedFields.success) {
         addOptimisticMessage({
-            id: Math.random().toString(),
+            id: window.crypto.randomUUID(),
             name: validatedFields.data.name,
             message: validatedFields.data.message,
             createdAt: new Date(),
