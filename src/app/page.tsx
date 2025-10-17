@@ -9,6 +9,7 @@ import { GuestbookSection } from '@/components/sections/guestbook-section';
 import { RsvpSection } from '@/components/sections/rsvp-section';
 import { getGuestbookMessages } from '@/lib/actions';
 import { FloralDivider } from '@/components/floral-divider';
+import { ScrollAnimator } from '@/components/scroll-animator';
 
 export default async function Home() {
   const initialMessages = await getGuestbookMessages();
@@ -19,17 +20,29 @@ export default async function Home() {
       <main className="flex-1">
         <HeroSection />
         <FloralDivider />
-        <InvitationSection />
+        <ScrollAnimator>
+          <InvitationSection />
+        </ScrollAnimator>
         <FloralDivider />
-        <EventsSection />
+        <ScrollAnimator>
+          <EventsSection />
+        </ScrollAnimator>
         <FloralDivider />
-        <VenueSection />
+        <ScrollAnimator>
+          <VenueSection />
+        </ScrollAnimator>
         <FloralDivider />
-        <GallerySection />
+        <ScrollAnimator>
+          <GallerySection />
+        </ScrollAnimator>
         <FloralDivider />
-        <GuestbookSection initialMessages={initialMessages} />
+        <ScrollAnimator>
+          <GuestbookSection initialMessages={initialMessages} />
+        </ScrollAnimator>
         <FloralDivider />
-        <RsvpSection />
+        <ScrollAnimator>
+          <RsvpSection />
+        </ScrollAnimator>
       </main>
       <Footer />
     </div>

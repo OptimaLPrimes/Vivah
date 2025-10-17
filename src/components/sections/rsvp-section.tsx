@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { useEffect } from "react";
 import { submitRsvp } from "@/lib/actions";
 import { useToast } from "@/hooks/use-toast";
@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/form";
 import { useTransition } from "react";
 import { Input } from "../ui/input";
+import { Confetti } from "../confetti";
 
 
 function SubmitButton() {
@@ -44,6 +45,7 @@ export function RsvpSection() {
     status: "idle",
   });
   const { toast } = useToast();
+  const [showConfetti, setShowConfetti] = useState(false);
   const form = useForm<Rsvp>({
     resolver: zodResolver(RsvpSchema),
     defaultValues: {
@@ -62,6 +64,7 @@ export function RsvpSection() {
         description: state.message,
       });
       form.reset();
+      setShowConfetti(true);
     } else if (state.status === "error") {
       toast({
         variant: "destructive",
@@ -72,7 +75,8 @@ export function RsvpSection() {
   }, [state, toast, form]);
   
   return (
-    <section id="rsvp" className="bg-background">
+    <section id="rsvp" className="bg-background relative">
+       {showConfetti && <Confetti />}
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-xl mx-auto">
           <Card className="shadow-2xl border-primary/20">

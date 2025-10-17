@@ -14,7 +14,7 @@ export function InvitationSection() {
           With joyful hearts, we, Vaishnavi and Suraj, invite you to share in our celebration of love as we exchange vows and begin our new life together.
         </p>
         
-        <Card className="max-w-3xl mx-auto p-4 md:p-8 shadow-2xl bg-background/80 backdrop-blur-sm relative overflow-hidden border-2 border-primary/50">
+        <Card className="max-w-3xl mx-auto p-4 md:p-8 shadow-2xl bg-background/80 backdrop-blur-sm relative overflow-hidden border-2 border-primary/50 animate-glow-border">
            <div className="absolute -top-16 -left-16 text-primary/10 opacity-50">
              <PaisleyIcon className="w-64 h-64" />
            </div>
