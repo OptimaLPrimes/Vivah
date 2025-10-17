@@ -83,4 +83,33 @@ body {
   section {
     @apply py-16 md:py-24;
   }
+  .gilded-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, #FFD700 50%, hsl(var(--primary)) 100%);
+    animation: shimmer 5s ease-in-out infinite;
+    background-size: 200% 200%;
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes draw-in {
+    from {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-draw-in {
+    animation: draw-in 3s ease-in-out forwards;
+  }
 }

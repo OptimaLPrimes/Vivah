@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import { PaisleyIcon } from "../icons/paisley-icon";
+import { Download, CalendarDays, Clock, MapPin } from "lucide-react";
+import { KalashIcon } from "../icons/kalash-icon";
+import { AnimatedPaisley } from "../animated-paisley";
 
 export function InvitationSection() {
   return (
@@ -15,12 +16,11 @@ export function InvitationSection() {
         </p>
         
         <Card className="max-w-4xl mx-auto p-4 md:p-8 shadow-2xl bg-background/80 backdrop-blur-sm relative overflow-hidden border-2 border-primary/50 animate-glow-border">
-           <div className="absolute -top-16 -left-16 text-primary/10 opacity-50">
-             <PaisleyIcon className="w-64 h-64" />
-           </div>
-           <div className="absolute -bottom-16 -right-16 text-primary/10 opacity-50 transform rotate-180">
-             <PaisleyIcon className="w-64 h-64" />
-           </div>
+           <AnimatedPaisley position="top-left" />
+           <AnimatedPaisley position="top-right" />
+           <AnimatedPaisley position="bottom-left" />
+           <AnimatedPaisley position="bottom-right" />
+           
            <div className="relative z-10">
                 <CardContent className="p-4 md:p-8">
                     <p className="font-headline text-2xl text-accent mb-4">
@@ -28,7 +28,7 @@ export function InvitationSection() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 items-center mb-6 text-center">
                         <div>
-                            <h3 className="font-headline text-5xl md:text-7xl font-bold text-primary">
+                            <h3 className="font-headline text-5xl md:text-7xl font-bold text-primary gilded-text">
                                 Vaishnavi
                             </h3>
                         </div>
@@ -36,7 +36,7 @@ export function InvitationSection() {
                             <p className="font-headline text-3xl text-muted-foreground">&</p>
                         </div>
                         <div>
-                            <h3 className="font-headline text-5xl md:text-7xl font-bold text-primary">
+                            <h3 className="font-headline text-5xl md:text-7xl font-bold text-primary gilded-text">
                                 Suraj
                             </h3>
                         </div>
@@ -63,16 +63,22 @@ export function InvitationSection() {
                         </div>
                     </div>
                     
-                    <div className="mt-8 pt-6 border-t border-border">
-                      <p className="text-lg mb-2">
+                    <div className="mt-8 pt-6 border-t border-border space-y-4">
+                      <p className="text-lg">
                           request the pleasure of your company at their wedding celebration on
                       </p>
-                      <p className="font-headline text-2xl md:text-3xl font-bold text-accent mb-6">
-                          Friday, 12th December 2025 at 1:12 PM
-                      </p>
-                      <p className="text-lg">
-                          at Vitthalrao Deshmukh Mangal Karyalay and Lawns, Bengaluru
-                      </p>
+                      <div className="flex items-center justify-center gap-4 font-headline text-2xl md:text-3xl font-bold text-accent">
+                        <CalendarDays className="w-8 h-8 text-primary" />
+                        <span>Friday, 12th December 2025</span>
+                      </div>
+                       <div className="flex items-center justify-center gap-4 font-headline text-2xl md:text-3xl font-bold text-accent">
+                        <Clock className="w-8 h-8 text-primary" />
+                        <span>at 1:12 PM</span>
+                      </div>
+                      <div className="flex flex-col items-center justify-center gap-2 text-lg">
+                         <MapPin className="w-8 h-8 text-primary" />
+                         <span>at Vitthalrao Deshmukh Mangal Karyalay and Lawns, Bengaluru</span>
+                      </div>
                     </div>
                 </CardContent>
            </div>
