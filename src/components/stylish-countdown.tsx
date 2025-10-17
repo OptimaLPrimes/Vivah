@@ -16,13 +16,6 @@ const CountdownRing = ({ radius, stroke, progress, colorStart, colorEnd, id }: {
             <stop offset="0%" style={{stopColor: colorStart, stopOpacity:1}} />
             <stop offset="100%" style={{stopColor: colorEnd, stopOpacity:1}} />
         </linearGradient>
-        <filter id={`glow-${id}`} x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
-            <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
     </defs>
     <circle
       stroke={`url(#${id})`}
@@ -33,7 +26,6 @@ const CountdownRing = ({ radius, stroke, progress, colorStart, colorEnd, id }: {
       r={normalizedRadius}
       cx={radius}
       cy={radius}
-      filter={`url(#glow-${id})`}
     />
     </>
   );
@@ -88,6 +80,8 @@ export const StylishCountdown = ({ date }: { date: string }) => {
 
     const daysProgress = (timeLeft.days / 365) * 100;
     const hoursProgress = (timeLeft.hours / 24) * 100;
+    const minutesProgress = (timeLeft.minutes / 60) * 100;
+    const secondsProgress = (timeLeft.seconds / 60) * 100;
 
     const size = 280;
     const radius = size / 2;
@@ -101,16 +95,16 @@ export const StylishCountdown = ({ date }: { date: string }) => {
                 height={size}
                 viewBox={`0 0 ${size} ${size}`}
             >
-                <circle cx={radius} cy={radius} r={radius - stroke * 2} stroke="hsl(var(--primary) / 0.1)" strokeWidth={stroke} fill="transparent" />
+                <circle cx={radius} cy={radius} r={radius - stroke} stroke="hsl(var(--primary) / 0.1)" strokeWidth={stroke} fill="transparent" />
                 <CountdownRing radius={radius} stroke={stroke} progress={daysProgress} colorStart="hsl(var(--primary))" colorEnd="#FFD700" id="days-gradient"/>
             </svg>
             <svg
-                className="absolute inset-0 transform scale-75"
+                className="absolute inset-0 transform scale-[0.7]"
                 width={size}
                 height={size}
                 viewBox={`0 0 ${size} ${size}`}
             >
-                <circle cx={radius} cy={radius} r={radius - stroke * 2} stroke="hsl(var(--accent) / 0.1)" strokeWidth={stroke} fill="transparent" />
+                <circle cx={radius} cy={radius} r={radius - stroke} stroke="hsl(var(--accent) / 0.1)" strokeWidth={stroke} fill="transparent" />
                  <CountdownRing radius={radius} stroke={stroke} progress={hoursProgress} colorStart="hsl(var(--accent))" colorEnd="#87CEEB" id="hours-gradient"/>
             </svg>
 
