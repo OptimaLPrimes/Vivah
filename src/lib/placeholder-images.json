@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "couple-hero",
+      "description": "A happy Indian couple at their wedding.",
+      "imageUrl": "https://picsum.photos/seed/vivah/1200/800",
+      "imageHint": "indian couple wedding"
+    },
+    {
+      "id": "couple-portrait",
+      "description": "Portrait of a smiling Indian couple.",
+      "imageUrl": "https://picsum.photos/seed/couple/400/400",
+      "imageHint": "indian couple portrait"
+    },
+    {
+      "id": "invitation-background",
+      "description": "Abstract background with Indian patterns.",
+      "imageUrl": "https://picsum.photos/seed/pattern/1000/1500",
+      "imageHint": "indian pattern"
+    },
+    {
+      "id": "venue-main",
+      "description": "Grand Indian wedding venue exterior.",
+      "imageUrl": "https://picsum.photos/seed/venue/800/600",
+      "imageHint": "indian wedding venue"
+    },
+    {
+      "id": "venue-map",
+      "description": "Placeholder image of a map showing a location.",
+      "imageUrl": "https://picsum.photos/seed/map/800/600",
+      "imageHint": "map location"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Couple during a pre-wedding photoshoot.",
+      "imageUrl": "https://picsum.photos/seed/gal1/600/400",
+      "imageHint": "pre-wedding photoshoot"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Couple sharing a laugh.",
+      "imageUrl": "https://picsum.photos/seed/gal2/600/400",
+      "imageHint": "happy couple"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Groom looking at the bride.",
+      "imageUrl": "https://picsum.photos/seed/gal3/600/400",
+      "imageHint": "couple love"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Couple in traditional attire.",
+      "imageUrl": "https://picsum.photos/seed/gal4/600/400",
+      "imageHint": "traditional attire"
+    },
+    {
+      "id": "gallery-5",
+      "description": "A candid shot of the couple.",
+      "imageUrl": "https://picsum.photos/seed/gal5/600/400",
+      "imageHint": "candid couple"
+    }
+  ]
 }
