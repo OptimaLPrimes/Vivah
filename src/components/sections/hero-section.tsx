@@ -8,18 +8,8 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center text-center text-white p-4 pt-20">
-      <div className="absolute inset-0">
-        <video
-          src="https://videos.pexels.com/video-files/4124367/4124367-hd_1920_1080_25fps.mp4" // Aurora video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
 
       <div className="relative z-10 flex flex-col items-center animate-fade-in-up">
         <h2 className="font-headline text-4xl md:text-6xl text-background/80 tracking-tight">
