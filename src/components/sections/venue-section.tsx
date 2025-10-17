@@ -37,7 +37,7 @@ export function VenueSection() {
                 </ul>
                 
                 <Button size="lg" className="mt-8 w-fit" asChild>
-                    <Link href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://www.google.com/maps/dir//Vitthalrao+Deshmukh+Mangal+Karyalaya,+Pimpalgaon+Mahadeo,+Maharashtra+431605/@19.2125029,77.3483339,646m/data=!3m1!1e3!4m16!1m7!3m6!1s0x3bd1d7fabc540b67:0xe809511c67ce2ff6!2sVitthalrao+Deshmukh+Mangal+Karyalaya!8m2!3d19.2121799!4d77.3489277!16s%2Fg%2F11gh_g05x_!4m7!1m0!1m5!1m1!1s0x3bd1d7fabc540b67:0xe809511c67ce2ff6!2m2!1d77.3489277!2d19.2121799?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                         <Navigation className="mr-2 h-5 w-5" />
                         Get Directions
                     </Link>
@@ -45,7 +45,7 @@ export function VenueSection() {
             </div>
             <div className="relative min-h-[300px] md:min-h-0">
                 {mapImage && (
-                    <Link href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://www.google.com/maps/dir//Vitthalrao+Deshmukh+Mangal+Karyalaya,+Pimpalgaon+Mahadeo,+Maharashtra+431605/@19.2125029,77.3483339,646m/data=!3m1!1e3!4m16!1m7!3m6!1s0x3bd1d7fabc540b67:0xe809511c67ce2ff6!2sVitthalrao+Deshmukh+Mangal+Karyalaya!8m2!3d19.2121799!4d77.3489277!16s%2Fg%2F11gh_g05x_!4m7!1m0!1m5!1m1!1s0x3bd1d7fabc540b67:0xe809511c67ce2ff6!2m2!1d77.3489277!2d19.2121799?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                       <Image 
                           src={mapImage.imageUrl}
                           alt={mapImage.description}

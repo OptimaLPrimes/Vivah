@@ -40,7 +40,7 @@ export function InvitationSection() {
                         Friday, 12th December 2025 at 1:12 PM
                     </p>
                     <p className="text-lg">
-                        at The Grand Palace, Royal Orchid Gardens, Bengaluru
+                        at Vitthalrao Deshmukh Mangal Karyalay and Lawns, Bengaluru
                     </p>
                 </CardContent>
            </div>
