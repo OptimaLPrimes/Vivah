@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  cursor: url('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/marigold_24.png'), auto;
 }
 
 @layer base {
