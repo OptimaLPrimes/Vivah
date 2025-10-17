@@ -8,25 +8,25 @@ body {
 
 @layer base {
   :root {
-    --background: 350 80% 97%; /* Soft Blush Pink */
-    --foreground: 340 30% 25%; /* Dark Dusty Rose */
-    --card: 350 80% 99%;
-    --card-foreground: 340 30% 25%;
-    --popover: 350 80% 99%;
-    --popover-foreground: 340 30% 25%;
-    --primary: 340 60% 65%; /* Dusty Rose */
-    --primary-foreground: 350 80% 99%;
-    --secondary: 350 70% 92%;
-    --secondary-foreground: 340 30% 25%;
-    --muted: 350 70% 92%;
-    --muted-foreground: 340 25% 45%;
-    --accent: 45 70% 75%; /* Soft Gold */
-    --accent-foreground: 40 30% 15%;
+    --background: 30 50% 98%; /* Warm Ivory */
+    --foreground: 30 20% 20%; /* Dark Brown */
+    --card: 30 50% 99%;
+    --card-foreground: 30 20% 20%;
+    --popover: 30 50% 99%;
+    --popover-foreground: 30 20% 20%;
+    --primary: 0 65% 50%; /* Ruby Red */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 65% 95%;
+    --secondary-foreground: 0 65% 30%;
+    --muted: 30 50% 94%;
+    --muted-foreground: 30 20% 40%;
+    --accent: 45 90% 60%; /* Gold */
+    --accent-foreground: 45 30% 20%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 350 60% 88%;
-    --input: 350 60% 88%;
-    --ring: 340 60% 65%;
+    --border: 0 50% 90%;
+    --input: 0 50% 90%;
+    --ring: 0 65% 50%;
     --radius: 0.8rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -38,25 +38,25 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 340 10% 15%; /* Darker Dusty Rose */
-    --foreground: 350 70% 95%; /* Light Blush */
-    --card: 340 10% 20%;
-    --card-foreground: 350 70% 95%;
-    --popover: 340 10% 15%;
-    --popover-foreground: 350 70% 95%;
-    --primary: 340 60% 65%; /* Dusty Rose */
-    --primary-foreground: 340 20% 10%;
-    --secondary: 340 10% 25%;
-    --secondary-foreground: 350 70% 95%;
-    --muted: 340 10% 25%;
-    --muted-foreground: 350 70% 80%;
-    --accent: 45 60% 70%; /* Soft Gold */
-    --accent-foreground: 40 30% 10%;
+    --background: 30 10% 10%; /* Dark Brown-Black */
+    --foreground: 30 30% 95%; /* Light Ivory */
+    --card: 30 10% 15%;
+    --card-foreground: 30 30% 95%;
+    --popover: 30 10% 10%;
+    --popover-foreground: 30 30% 95%;
+    --primary: 0 70% 60%; /* Brighter Ruby Red */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 10% 20%;
+    --secondary-foreground: 30 30% 95%;
+    --muted: 30 10% 25%;
+    --muted-foreground: 30 30% 80%;
+    --accent: 45 80% 65%; /* Brighter Gold */
+    --accent-foreground: 45 30% 15%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 340 10% 30%;
-    --input: 340 10% 30%;
-    --ring: 340 60% 65%;
+    --border: 30 10% 25%;
+    --input: 30 10% 25%;
+    --ring: 0 70% 60%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
