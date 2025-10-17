@@ -1,12 +1,10 @@
 "use client";
 
-import { useFormState } from "react-dom";
-import { useEffect, useState } from "react";
+import { useActionState } from "react";
+import { useEffect } from "react";
 import { submitRsvp } from "@/lib/actions";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -28,6 +26,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useTransition } from "react";
+import { Input } from "../ui/input";
 
 
 function SubmitButton() {
@@ -40,7 +39,7 @@ function SubmitButton() {
 }
 
 export function RsvpSection() {
-  const [state, formAction] = useFormState(submitRsvp, {
+  const [state, formAction] = useActionState(submitRsvp, {
     message: "",
     status: "idle",
   });
@@ -136,7 +135,7 @@ export function RsvpSection() {
                         <FormItem>
                             <FormLabel>Number of Guests</FormLabel>
                             <FormControl>
-                            <Input type="number" min="1" max="10" {...field} />
+                            <Input type="number" min="1" max="10" {...field} onChange={(e) => field.onChange(parseInt(e.target.value, 10))}/>
                             </FormControl>
                             <FormMessage />
                         </FormItem>

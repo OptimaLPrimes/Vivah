@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useTransition, useEffect, useOptimistic } from "react";
-import { useFormState } from "react-dom";
-import { submitGuestbookMessage, getGuestbookMessages } from "@/lib/actions";
+import { useState, useTransition, useEffect, useOptimistic, useActionState } from "react";
+import { submitGuestbookMessage } from "@/lib/actions";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -24,7 +23,7 @@ function SubmitButton() {
 }
 
 export function GuestbookSection({ initialMessages }: { initialMessages: GuestbookEntry[] }) {
-  const [state, formAction] = useFormState(submitGuestbookMessage, {
+  const [state, formAction] = useActionState(submitGuestbookMessage, {
     message: "",
     status: "idle",
   });
@@ -68,7 +67,7 @@ export function GuestbookSection({ initialMessages }: { initialMessages: Guestbo
         });
     }
     
-    await formAction(formData);
+    formAction(formData);
   };
 
   return (
@@ -120,7 +119,7 @@ export function GuestbookSection({ initialMessages }: { initialMessages: Guestbo
                   <p className="mb-2">"{entry.message}"</p>
                   <div className="flex justify-between items-center text-sm">
                     <p className="font-bold text-primary">- {entry.name}</p>
-                    <p className="text-muted-foreground">{format(entry.createdAt, "MMM d, yyyy")}</p>
+                    <p className="text-muted-foreground">{format(new Date(entry.createdAt), "MMM d, yyyy")}</p>
                   </div>
                 </CardContent>
               </Card>
