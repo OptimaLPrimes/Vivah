@@ -1,6 +1,6 @@
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { CountdownTimer } from "../countdown-timer";
+import { StylishCountdown } from "../stylish-countdown";
 import { AnimatedName } from "../animated-name";
 
 export function HeroSection() {
@@ -25,7 +25,7 @@ export function HeroSection() {
         </p>
 
         <div className="animate-breathe">
-            <CountdownTimer date={weddingDate} />
+            <StylishCountdown date={weddingDate} />
         </div>
 
         <div className="flex gap-4 mt-12">
