@@ -7,7 +7,7 @@ export function HeroSection() {
   const weddingDate = "2025-12-12T13:12:00";
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center text-center text-white p-4 pt-20">
+    <section id="home" className="relative h-screen min-h-[800px] w-full flex items-center justify-center text-center text-white p-4 pt-20">
       <div className="absolute inset-0 bg-gradient-to-br from-teal-900 via-blue-900 to-indigo-900" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
 

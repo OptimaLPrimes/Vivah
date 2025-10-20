@@ -12,7 +12,7 @@ const NameCharacter = ({ char, index }: { char: string; index: number }) => {
 
   return (
     <span
-      className={`font-script text-6xl md:text-8xl font-bold gilded-text drop-shadow-lg transition-opacity duration-500 ${
+      className={`font-script text-7xl md:text-9xl font-bold gilded-text drop-shadow-lg transition-opacity duration-500 ${
         isAnimated ? "opacity-100" : "opacity-0"
       }`}
       style={{ transitionDelay: `${index * 50}ms` }}
@@ -28,7 +28,7 @@ export const AnimatedName = ({ name }: { name: string }) => {
     <div className="flex items-center justify-center flex-wrap">
       {name.split("").map((char, index) =>
         char === " " ? (
-          <div key={index} className="w-2 md:w-4" />
+          <div key={index} className="w-4 md:w-6" />
         ) : (
           <NameCharacter key={index} char={char} index={index} />
         )
