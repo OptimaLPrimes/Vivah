@@ -67,11 +67,6 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
             step !== "closed" && "opacity-0"
           )}
         >
-          <div className="text-center text-primary-foreground -mt-10">
-            
-            <p className="mt-2 text-lg text-foreground/80">Awaiting Your Presence</p>
-          </div>
-
           <div className="absolute top-[48%] transform -translate-y-1/2">
             <SealIcon
               className={cn(
