@@ -8,7 +8,7 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-center text-center text-white p-4 pt-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-900 via-blue-900 to-indigo-900" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
 
       <div className="relative z-10 flex flex-col items-center animate-fade-in-up">
