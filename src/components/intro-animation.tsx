@@ -68,9 +68,7 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
           )}
         >
           <div className="text-center text-primary-foreground -mt-10">
-            <h1 className="font-script text-5xl md:text-7xl gilded-text">
-              Vaishnavi & Suraj
-            </h1>
+            
             <p className="mt-2 text-lg text-foreground/80">Awaiting Your Presence</p>
           </div>
 
