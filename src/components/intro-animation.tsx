@@ -12,6 +12,16 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
   const [step, setStep] = useState<AnimationStep>("closed");
 
   useEffect(() => {
+    // Automatically start the animation sequence
+    const autoOpenTimer = setTimeout(() => {
+      handleOpen();
+    }, 1000); // 1-second delay before opening
+
+    return () => clearTimeout(autoOpenTimer);
+  }, []);
+
+
+  useEffect(() => {
     if (step === "exiting") {
       const timer = setTimeout(onFinish, 1000); // Match animation duration
       return () => clearTimeout(timer);
@@ -73,16 +83,6 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
             />
           </div>
         </div>
-
-        {/* CTA */}
-        {step === "closed" && (
-          <button
-            onClick={handleOpen}
-            className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 px-6 py-3 bg-primary text-primary-foreground rounded-full shadow-lg animate-pulse"
-          >
-            Tap to Open
-          </button>
-        )}
       </div>
     </div>
   );
