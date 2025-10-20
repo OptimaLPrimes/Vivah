@@ -37,10 +37,19 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-1000",
+        "fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background transition-opacity duration-1000",
         step === "exiting" ? "opacity-0" : "opacity-100"
       )}
     >
+      <div
+        className={cn(
+            "text-center mb-4 transition-opacity duration-500",
+            step !== "closed" ? "opacity-0" : "opacity-100"
+        )}>
+        <h2 className="font-headline text-3xl md:text-5xl text-primary">
+          विवाह सोहळा निमंत्रण 💌
+        </h2>
+      </div>
       <div className="relative w-[90vw] max-w-lg md:w-[600px]">
         <EnvelopeIcon step={step} />
 
@@ -54,9 +63,9 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
           style={{ transitionDelay: '0.5s' }}
         >
           <div className="text-center p-8">
-            <h2 className="font-headline text-3xl md:text-5xl text-primary">
-              12 DECEMBER 2025
-            </h2>
+            <h3 className="font-headline text-3xl md:text-5xl text-accent">
+                12th Dec 2025
+            </h3>
           </div>
         </div>
 
