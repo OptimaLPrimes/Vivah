@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -12,10 +13,13 @@ const NameCharacter = ({ char, index }: { char: string; index: number }) => {
 
   return (
     <span
-      className={`font-script text-7xl md:text-9xl font-bold gilded-text drop-shadow-lg transition-opacity duration-500 ${
+      className={`font-script text-7xl md:text-9xl font-bold text-background/80 drop-shadow-lg transition-opacity duration-500 animate-breathe ${
         isAnimated ? "opacity-100" : "opacity-0"
       }`}
-      style={{ transitionDelay: `${index * 50}ms` }}
+      style={{ 
+        transitionDelay: `${index * 50}ms`,
+        animationDelay: `${index * 150}ms` 
+      }}
     >
       {char}
     </span>
