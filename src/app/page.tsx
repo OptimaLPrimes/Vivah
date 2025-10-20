@@ -32,9 +32,9 @@ export default function Home() {
       <ScrollAnimator><InvitationSection /></ScrollAnimator>
       <FloralDivider />
       <ScrollAnimator><EventsSection /></ScrollAnimator>
-      <FloralDivider />
+      <ScrollAnimator><PhotoSection imageId="couple-hero" /></ScrollAnimator>
       <ScrollAnimator><VenueSection /></ScrollAnimator>
-      <ScrollAnimator><PhotoSection /></ScrollAnimator>
+      <ScrollAnimator><PhotoSection imageId="couple-portrait" /></ScrollAnimator>
       <ScrollAnimator><GallerySection /></ScrollAnimator>
       <FloralDivider />
       <ScrollAnimator><GuestbookSection initialMessages={guestbookMessages} /></ScrollAnimator>

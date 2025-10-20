@@ -3,8 +3,8 @@ import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card } from "@/components/ui/card";
 
-export function PhotoSection() {
-  const photo = PlaceHolderImages.find((img) => img.id === "couple-portrait");
+export function PhotoSection({ imageId = "couple-portrait" }: { imageId?: string }) {
+  const photo = PlaceHolderImages.find((img) => img.id === imageId);
 
   if (!photo) return null;
 
