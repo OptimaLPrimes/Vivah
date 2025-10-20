@@ -13,6 +13,7 @@ import { FloralDivider } from "@/components/floral-divider";
 import { ScrollAnimator } from "@/components/scroll-animator";
 import { GuestbookEntry } from "@/lib/types";
 import { getGuestbookMessages } from "@/lib/actions";
+import { PhotoSection } from "@/components/sections/photo-section";
 
 export default function Home() {
   const [guestbookMessages, setGuestbookMessages] = useState<GuestbookEntry[]>([]);
@@ -33,7 +34,7 @@ export default function Home() {
       <ScrollAnimator><EventsSection /></ScrollAnimator>
       <FloralDivider />
       <ScrollAnimator><VenueSection /></ScrollAnimator>
-      <FloralDivider />
+      <ScrollAnimator><PhotoSection /></ScrollAnimator>
       <ScrollAnimator><GallerySection /></ScrollAnimator>
       <FloralDivider />
       <ScrollAnimator><GuestbookSection initialMessages={guestbookMessages} /></ScrollAnimator>
