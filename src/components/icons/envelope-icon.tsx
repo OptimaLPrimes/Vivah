@@ -1,162 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: url('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/marigold_24.png'), auto;
-}
+import { cn } from "@/lib/utils";
 
-@layer base {
-  :root {
-    --background: 35 100% 98%; /* Very Pale Orange */
-    --foreground: 25 30% 20%; /* Dark Brown */
-    --card: 35 100% 99%;
-    --card-foreground: 25 30% 20%;
-    --popover: 35 100% 99%;
-    --popover-foreground: 25 30% 20%;
-    --primary: 35 85% 55%; /* Saffron */
-    --primary-foreground: 25 30% 10%;
-    --secondary: 35 100% 96%;
-    --secondary-foreground: 35 90% 30%;
-    --muted: 35 90% 94%;
-    --muted-foreground: 25 30% 40%;
-    --accent: 25 95% 60%; /* Bright Orange */
-    --accent-foreground: 25 30% 20%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 35 80% 90%;
-    --input: 35 80% 90%;
-    --ring: 35 100% 58%;
-    --radius: 0.8rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-  .dark {
-    --background: 25 15% 10%; /* Dark Brown-Black */
-    --foreground: 30 30% 95%; /* Light Ivory */
-    --card: 25 15% 15%;
-    --card-foreground: 30 30% 95%;
-    --popover: 25 15% 10%;
-    --popover-foreground: 30 30% 95%;
-    --primary: 35 100% 65%; /* Brighter Saffron */
-    --primary-foreground: 25 30% 10%;
-    --secondary: 25 15% 20%;
-    --secondary-foreground: 30 30% 95%;
-    --muted: 25 15% 25%;
-    --muted-foreground: 30 30% 80%;
-    --accent: 25 95% 65%; /* Brighter Orange */
-    --accent-foreground: 25 30% 15%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 25 15% 25%;
-    --input: 25 15% 25%;
-    --ring: 35 100% 65%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
+type AnimationStep = "closed" | "opening" | "revealing" | "exiting";
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  section {
-    @apply py-16 md:py-24;
-  }
-  .gilded-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--primary)) 100%);
-    animation: shimmer 5s ease-in-out infinite;
-    background-size: 200% 200%;
-  }
-}
+export const EnvelopeIcon = ({
+  className,
+  step,
+}: {
+  className?: string;
+  step: AnimationStep;
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 600 400"
+    className={cn("w-full h-auto drop-shadow-2xl", className)}
+  >
+    <defs>
+      <linearGradient id="envelopeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{ stopColor: "hsl(var(--primary))", stopOpacity: 0.8 }} />
+        <stop offset="100%" style={{ stopColor: "hsl(var(--accent))", stopOpacity: 0.9 }} />
+      </linearGradient>
+    </defs>
+    
+    {/* Main body */}
+    <rect x="0" y="100" width="600" height="300" fill="url(#envelopeGradient)" />
+    
+    {/* Side flaps */}
+    <path d="M 0 100 L 300 250 L 0 400 Z" fill="hsl(var(--primary))" opacity="0.5" />
+    <path d="M 600 100 L 300 250 L 600 400 Z" fill="hsl(var(--primary))" opacity="0.5" />
 
-@layer utilities {
-  @keyframes shimmer {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+    {/* Bottom flap */}
+    <path d="M 0 400 L 300 250 L 600 400 Z" fill="hsl(var(--primary))" opacity="0.7" />
 
-  @keyframes draw-in {
-    from {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-    }
-    to {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .animate-draw-in {
-    animation: draw-in 3s ease-in-out forwards;
-  }
-
-  @keyframes draw-letter {
-    from {
-      stroke-dashoffset: 300;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .animate-draw-letter {
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-    animation: draw-letter 1s ease-out forwards;
-    fill-opacity: 0;
-    animation-fill-mode: forwards;
-  }
-
-  .animate-draw-letter-fill {
-    animation-delay: 0.5s; /* Delay fill to start after drawing */
-    animation: fill-letter 0.5s ease-out forwards;
-  }
-
-  @keyframes fill-letter {
-    from {
-      fill-opacity: 0;
-    }
-    to {
-      fill-opacity: 1;
-    }
-  }
-
-  @keyframes sparkle {
-    0%, 100% {
-      opacity: 0;
-      transform: scale(0.5) rotate(0deg);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.5) rotate(180deg);
-    }
-  }
-  
-  .animate-sparkle {
-    animation: sparkle 2s ease-in-out infinite;
-  }
-}
+    {/* Top flap */}
+    <path
+      d="M 0 100 L 300 250 L 600 100 Z"
+      fill="hsl(var(--accent))"
+      className={cn(
+        "transition-transform duration-1000 ease-in-out",
+      )}
+      style={{
+        transformOrigin: "center 100px",
+        transform:
+          step === "opening" || step === "revealing" || step === "exiting"
+            ? "rotateX(-180deg)"
+            : "rotateX(0deg)",
+      }}
+    />
+  </svg>
+);

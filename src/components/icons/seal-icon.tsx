@@ -1,162 +1,45 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: url('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/marigold_24.png'), auto;
-}
+import { cn } from "@/lib/utils";
 
-@layer base {
-  :root {
-    --background: 35 100% 98%; /* Very Pale Orange */
-    --foreground: 25 30% 20%; /* Dark Brown */
-    --card: 35 100% 99%;
-    --card-foreground: 25 30% 20%;
-    --popover: 35 100% 99%;
-    --popover-foreground: 25 30% 20%;
-    --primary: 35 85% 55%; /* Saffron */
-    --primary-foreground: 25 30% 10%;
-    --secondary: 35 100% 96%;
-    --secondary-foreground: 35 90% 30%;
-    --muted: 35 90% 94%;
-    --muted-foreground: 25 30% 40%;
-    --accent: 25 95% 60%; /* Bright Orange */
-    --accent-foreground: 25 30% 20%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 35 80% 90%;
-    --input: 35 80% 90%;
-    --ring: 35 100% 58%;
-    --radius: 0.8rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-  .dark {
-    --background: 25 15% 10%; /* Dark Brown-Black */
-    --foreground: 30 30% 95%; /* Light Ivory */
-    --card: 25 15% 15%;
-    --card-foreground: 30 30% 95%;
-    --popover: 25 15% 10%;
-    --popover-foreground: 30 30% 95%;
-    --primary: 35 100% 65%; /* Brighter Saffron */
-    --primary-foreground: 25 30% 10%;
-    --secondary: 25 15% 20%;
-    --secondary-foreground: 30 30% 95%;
-    --muted: 25 15% 25%;
-    --muted-foreground: 30 30% 80%;
-    --accent: 25 95% 65%; /* Brighter Orange */
-    --accent-foreground: 25 30% 15%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 25 15% 25%;
-    --input: 25 15% 25%;
-    --ring: 35 100% 65%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  section {
-    @apply py-16 md:py-24;
-  }
-  .gilded-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--primary)) 100%);
-    animation: shimmer 5s ease-in-out infinite;
-    background-size: 200% 200%;
-  }
-}
-
-@layer utilities {
-  @keyframes shimmer {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  @keyframes draw-in {
-    from {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-    }
-    to {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .animate-draw-in {
-    animation: draw-in 3s ease-in-out forwards;
-  }
-
-  @keyframes draw-letter {
-    from {
-      stroke-dashoffset: 300;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .animate-draw-letter {
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-    animation: draw-letter 1s ease-out forwards;
-    fill-opacity: 0;
-    animation-fill-mode: forwards;
-  }
-
-  .animate-draw-letter-fill {
-    animation-delay: 0.5s; /* Delay fill to start after drawing */
-    animation: fill-letter 0.5s ease-out forwards;
-  }
-
-  @keyframes fill-letter {
-    from {
-      fill-opacity: 0;
-    }
-    to {
-      fill-opacity: 1;
-    }
-  }
-
-  @keyframes sparkle {
-    0%, 100% {
-      opacity: 0;
-      transform: scale(0.5) rotate(0deg);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.5) rotate(180deg);
-    }
-  }
-  
-  .animate-sparkle {
-    animation: sparkle 2s ease-in-out infinite;
-  }
-}
+export const SealIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 100"
+    className={cn("w-20 h-20", className)}
+  >
+    <defs>
+      <filter id="wobble">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.1"
+          numOctaves="1"
+          result="warp"
+        />
+        <feDisplacementMap
+          xChannelSelector="R"
+          yChannelSelector="G"
+          scale="3"
+          in="SourceGraphic"
+          in2="warp"
+        />
+      </filter>
+    </defs>
+    <circle
+      cx="50"
+      cy="50"
+      r="45"
+      fill="currentColor"
+      filter="url(#wobble)"
+    />
+    <text
+      x="50"
+      y="58"
+      fontFamily="Great Vibes, cursive"
+      fontSize="40"
+      fill="hsl(var(--accent-foreground))"
+      textAnchor="middle"
+    >
+      V&S
+    </text>
+  </svg>
+);

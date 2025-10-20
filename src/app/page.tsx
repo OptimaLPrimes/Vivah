@@ -14,9 +14,11 @@ import { ScrollAnimator } from "@/components/scroll-animator";
 import { GuestbookEntry } from "@/lib/types";
 import { getGuestbookMessages } from "@/lib/actions";
 import { PhotoSection } from "@/components/sections/photo-section";
+import { IntroAnimation } from "@/components/intro-animation";
 
 export default function Home() {
   const [guestbookMessages, setGuestbookMessages] = useState<GuestbookEntry[]>([]);
+  const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -24,7 +26,20 @@ export default function Home() {
       setGuestbookMessages(messages);
     };
     fetchMessages();
+    
+    if (sessionStorage.getItem("introShown")) {
+      setShowIntro(false);
+    }
   }, []);
+
+  const handleIntroFinish = () => {
+    setShowIntro(false);
+    sessionStorage.setItem("introShown", "true");
+  };
+  
+  if (showIntro) {
+    return <IntroAnimation onFinish={handleIntroFinish} />;
+  }
 
   return (
     <main>
