@@ -3,61 +3,61 @@
     {
       "id": "couple-hero",
       "description": "A happy Indian couple at their wedding.",
-      "imageUrl": "https://picsum.photos/seed/vivah/1200/800",
+      "imageUrl": "https://images.unsplash.com/photo-1708963738411-74ab1cd5eafb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjb3VwbGUlMjB3ZWRkaW5nfGVufDB8fHx8MTc2MTA2NDQzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "indian couple wedding"
     },
     {
       "id": "couple-portrait",
       "description": "Portrait of a smiling Indian couple.",
-      "imageUrl": "https://picsum.photos/seed/couple/400/400",
+      "imageUrl": "https://storage.googleapis.com/aifirebase-7a052.appspot.com/users%2Fp5gqM8dKSyWd2s3C7qjGqAkeaHj2%2Fuploads%2F2024-09-06T11-09-32.969Z%2Fwedding-image-2.jpeg?alt=media&token=7c1b5190-67c6-4c4f-9e6b-07b931dd25f7",
       "imageHint": "indian couple portrait"
     },
     {
       "id": "invitation-background",
       "description": "Abstract background with Indian patterns.",
-      "imageUrl": "https://picsum.photos/seed/pattern/1000/1500",
+      "imageUrl": "https://images.unsplash.com/photo-1644025880496-a2261a07126e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxpbmRpYW4lMjBwYXR0ZXJufGVufDB8fHx8MTc2MTA2NDQzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "indian pattern"
     },
     {
       "id": "venue-main",
       "description": "Grand Indian wedding venue exterior.",
-      "imageUrl": "https://picsum.photos/seed/venue/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1739047598460-f249269b7708?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjB3ZWRkaW5nJTIwdmVudWV8ZW58MHx8fHwxNzYxMDY0NDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "indian wedding venue"
     },
     {
       "id": "venue-map",
       "description": "Placeholder image of a map showing a location.",
-      "imageUrl": "https://picsum.photos/seed/map/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1736117704452-46670dd0c81f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjBsb2NhdGlvbnxlbnwwfHx8fDE3NjEwNTAyMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map location"
     },
     {
       "id": "gallery-1",
       "description": "Couple during a pre-wedding photoshoot.",
-      "imageUrl": "https://picsum.photos/seed/gal1/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1758109622006-390faaed04b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJlLXdlZGRpbmclMjBwaG90b3Nob290fGVufDB8fHx8MTc2MTA2NDQzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pre-wedding photoshoot"
     },
     {
       "id": "gallery-2",
       "description": "Couple sharing a laugh.",
-      "imageUrl": "https://picsum.photos/seed/gal2/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1605381942640-0a262ce59788?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYXBweSUyMGNvdXBsZXxlbnwwfHx8fDE3NjEwMDE2NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "happy couple"
     },
     {
       "id": "gallery-3",
       "description": "Groom looking at the bride.",
-      "imageUrl": "https://picsum.photos/seed/gal3/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1561240055-102e7eaa2961?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3VwbGUlMjBsb3ZlfGVufDB8fHx8MTc2MTAzODE0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "couple love"
     },
     {
       "id": "gallery-4",
       "description": "Couple in traditional attire.",
-      "imageUrl": "https://picsum.photos/seed/gal4/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1675388436299-6a6b272a83a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmFkaXRpb25hbCUyMGF0dGlyZXxlbnwwfHx8fDE3NjEwMjc5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "traditional attire"
     },
     {
       "id": "gallery-5",
       "description": "A candid shot of the couple.",
-      "imageUrl": "https://picsum.photos/seed/gal5/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1719857646553-92342880175d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYW5kaWQlMjBjb3VwbGV8ZW58MHx8fHwxNzYxMDY0NDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "candid couple"
     }
   ]
