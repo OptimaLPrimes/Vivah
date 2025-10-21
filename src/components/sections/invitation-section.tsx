@@ -49,10 +49,10 @@ export function InvitationSection() {
                         <div className="space-y-1">
                             <p className="font-semibold text-accent">Ms. Vaishnavi</p>
                             <p className="text-muted-foreground text-xs">(Software Developer)</p>
-                            <p>Daughter of Smt. Sagar tai and Dr. Harishchandra Sheshrao Pande Patil,</p>
-                            <p className="text-xs text-muted-foreground">(Principal, Shankarrao Mohite Mahavidyalaya, Akluj)</p>
-                            <p>Granddaughter of Shri. Sheshrao Motiram Pande Patil</p>
-                            <p>Niece of Smt. Sonabai, Tq. Himayatnagar, Dist. Nanded</p>
+                            <p>Daughter of  Gangasagar tai and Dr. Harishchandra Sheshrao Patange,</p>
+                            <p className="text-xs text-muted-foreground">(Principal, Yashwant Mahavidyalaya, Nanded)</p>
+                            <p>Granddaughter of Shri. Sheshrao Motiram Patange</p>
+                            <p>Niece of Saraswati Sheshrao Patange, Tq. Himayatnagar, Dist. Nanded</p>
                         </div>
                          <div className="space-y-1">
                             <p className="font-semibold text-accent">Mr. Suraj</p>
@@ -77,7 +77,7 @@ export function InvitationSection() {
                       </div>
                       <div className="flex flex-col items-center justify-center gap-2 text-lg">
                          <MapPin className="w-8 h-8 text-primary" />
-                         <span>at Vitthalrao Deshmukh Mangal Karyalay and Lawns, Bengaluru</span>
+                         <span>at Vitthalrao Deshmukh Mangal Karyalay and Lawns, Nanded</span>
                       </div>
                     </div>
                 </CardContent>

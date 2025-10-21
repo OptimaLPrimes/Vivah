@@ -41,16 +41,17 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
         step === "exiting" ? "opacity-0" : "opacity-100"
       )}
     >
-      <div
-        className={cn(
-            "text-center mb-4 transition-opacity duration-500",
-            step !== "closed" ? "opacity-0" : "opacity-100"
-        )}>
-        <h2 className="font-headline text-3xl md:text-5xl text-primary">
-          विवाह सोहळा निमंत्रण 💌
-        </h2>
-      </div>
       <div className="relative w-[90vw] max-w-lg md:w-[600px]">
+         <div
+            className={cn(
+                "text-center mb-8 transition-opacity duration-500",
+                step !== "closed" ? "opacity-0" : "opacity-100"
+            )}>
+            <h2 className="font-headline text-3xl md:text-5xl text-primary">
+              विवाह सोहळा निमंत्रण 💌
+            </h2>
+        </div>
+
         <EnvelopeIcon step={step} />
 
         {/* Inner Card */}
@@ -64,8 +65,9 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
         >
           <div className="text-center p-8">
             <h3 className="font-headline text-3xl md:text-5xl text-accent">
-                12th Dec 2025
+            Vaishnavi & Suraj
             </h3>
+            <p className="mt-2 text-lg text-foreground/80">Are getting married!</p>
           </div>
         </div>
 

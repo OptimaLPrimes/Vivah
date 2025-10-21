@@ -12,7 +12,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
 
       <div className="relative z-10 flex flex-col items-center animate-fade-in-up">
-        <div className="font-headline text-5xl text-primary animate-draw-in-out mb-4">डेमो</div>
+        <div className="font-headline text-5xl text-primary animate-draw-in-out mb-4">॥ श्री गणेशाय नमः ॥</div>
 
         <h2 className="font-headline text-3xl md:text-4xl text-background/80 tracking-tight mb-4">
           We're Getting Married!
