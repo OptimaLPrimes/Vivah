@@ -84,12 +84,6 @@ export function InvitationSection() {
            </div>
         </Card>
 
-        <div className="mt-12">
-          <Button size="lg">
-            <Download className="mr-2 h-5 w-5" />
-            Download Invitation (PDF)
-          </Button>
-        </div>
       </div>
     </section>
   );
