@@ -50,7 +50,7 @@ export function InvitationSection() {
                             <p className="font-semibold text-accent">Ms. Vaishnavi</p>
                             <p className="text-muted-foreground text-xs">(Software Developer)</p>
                             <p>Daughter of  Gangasagar tai and Dr. Harishchandra Sheshrao Patange,</p>
-                            <p className="text-xs text-muted-foreground">(Principal, Yashwant Mahavidyalaya, Nanded)</p>
+                            <p className="text-xs text-muted-foreground">(Vice Principal, Yashwant Mahavidyalaya, Nanded)</p>
                             <p>Granddaughter of Shri. Sheshrao Motiram Patange</p>
                             <p>Niece of Saraswati Sheshrao Patange, Tq. Himayatnagar, Dist. Nanded</p>
                         </div>
