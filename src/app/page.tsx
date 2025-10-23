@@ -9,7 +9,6 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { InvitationSection } from "@/components/sections/invitation-section";
 import { VenueSection } from "@/components/sections/venue-section";
 import { Footer } from "@/components/layout/footer";
-import { FloralDivider } from "@/components/floral-divider";
 import { ScrollAnimator } from "@/components/scroll-animator";
 import { GuestbookEntry } from "@/lib/types";
 import { getGuestbookMessages } from "@/lib/actions";
@@ -45,13 +44,11 @@ export default function Home() {
     <main>
       <ScrollAnimator><HeroSection /></ScrollAnimator>
       <ScrollAnimator><InvitationSection /></ScrollAnimator>
-      <FloralDivider />
       <ScrollAnimator><EventsSection /></ScrollAnimator>
       <ScrollAnimator><PhotoSection imageId="couple-hero" /></ScrollAnimator>
       <ScrollAnimator><VenueSection /></ScrollAnimator>
       <ScrollAnimator><PhotoSection imageId="couple-portrait" /></ScrollAnimator>
       <ScrollAnimator><GallerySection /></ScrollAnimator>
-      <FloralDivider />
       <ScrollAnimator><GuestbookSection initialMessages={guestbookMessages} /></ScrollAnimator>
       <Footer />
     </main>

@@ -4,7 +4,6 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { FloralDivider } from "../floral-divider";
 import { useEffect, useState } from "react";
 
 export function Footer() {
@@ -15,8 +14,7 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="bg-secondary/30">
-        <FloralDivider />
+    <footer className="bg-secondary/30 pt-12">
         <div className="container mx-auto py-12 px-4 md:px-6 text-center">
             <h3 className="font-headline text-3xl mb-4 text-primary">#VaishnaviWedsSuraj</h3>
             <p className="mb-6 max-w-2xl mx-auto">
