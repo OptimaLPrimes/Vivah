@@ -117,6 +117,10 @@ export default {
           '0%': { transform: 'scale(0)', opacity: '0' },
           '50%': { transform: 'scale(1.1)', opacity: '1' },
           '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        'glow-border': {
+            '0%, 100%': { 'border-color': 'hsl(var(--primary) / 0.5)' },
+            '50%': { 'border-color': 'hsl(var(--accent) / 1)' },
         }
       },
       animation: {
@@ -127,6 +131,7 @@ export default {
         'breathe': 'breathe 4s ease-in-out infinite',
         'sparkle': 'sparkle 3s ease-in-out infinite',
         'draw-in-out': 'draw-in-out 1.5s ease-in-out forwards',
+        'glow-border': 'glow-border 3s ease-in-out infinite',
       },
     },
   },
