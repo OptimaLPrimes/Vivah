@@ -26,7 +26,7 @@ export function VenueSection() {
                 <MapPin className="h-10 w-10 text-primary mb-4" />
                 <h3 className="font-headline text-3xl font-bold text-accent mb-2">Vitthalrao Deshmukh Mangal Karyalay and Lawns</h3>
                 <p className="text-lg font-semibold">विठ्ठलराव देशमुख मंगल कार्यालय</p>
-                <p className="text-muted-foreground mb-6"> City, Bengaluru, Karnataka </p>
+                <p className="text-muted-foreground mb-6"> Pimpalgaon, Nanded</p>
                 
                 <h4 className="font-bold mb-2 mt-4">Travel Information</h4>
                 <ul className="list-disc list-inside text-muted-foreground space-y-1 text-left">
