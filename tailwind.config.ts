@@ -19,6 +19,7 @@ export default {
       fontFamily: {
         body: ['PT Sans', 'sans-serif'],
         headline: ['Playfair Display', 'serif'],
+        script: ['Great Vibes', 'cursive'],
         code: ['monospace'],
       },
       colors: {

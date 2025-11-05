@@ -3,40 +3,39 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   cursor: url('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/marigold_24.png'), auto;
 }
 
 @layer base {
   :root {
-    --background: 260 30% 10%; /* Deep Indigo/Purple */
-    --foreground: 45 30% 95%; /* Light Golden White */
-    
-    --card: 260 30% 15%;
-    --card-foreground: 45 30% 95%;
-    
-    --popover: 260 30% 10%;
-    --popover-foreground: 45 30% 95%;
-    
-    --primary: 45 100% 60%; /* Glowing Gold */
-    --primary-foreground: 260 30% 10%;
-    
-    --secondary: 260 30% 20%;
-    --secondary-foreground: 45 30% 95%;
-    
-    --muted: 260 20% 35%;
-    --muted-foreground: 260 15% 65%;
-    
-    --accent: 320 80% 60%; /* Vibrant Magenta/Pink */
-    --accent-foreground: 320 20% 98%;
-    
+    --background: 50 50% 94%; /* Very Pale Yellow */
+    --foreground: 24 10% 20%; /* Dark Brown/Black for text */
+
+    --card: 50 40% 100%;
+    --card-foreground: 24 10% 20%;
+
+    --popover: 50 50% 94%;
+    --popover-foreground: 24 10% 20%;
+
+    --primary: 30 100% 60%; /* Deep Saffron */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 50% 90%;
+    --secondary-foreground: 24 10% 20%;
+
+    --muted: 50 20% 85%;
+    --muted-foreground: 24 10% 40%;
+
+    --accent: 225 73% 63%; /* Royal Blue */
+    --accent-foreground: 0 0% 100%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    
-    --border: 260 20% 25%;
-    --input: 260 20% 25%;
-    --ring: 45 100% 60%;
-    
+
+    --border: 50 20% 80%;
+    --input: 50 20% 80%;
+    --ring: 30 100% 60%;
+
     --radius: 0.8rem;
     
     --sidebar-background: 0 0% 98%;
@@ -59,7 +58,7 @@ body {
     --popover: 260 30% 10%;
     --popover-foreground: 45 30% 95%;
     
-    --primary: 45 100% 60%; /* Glowing Gold */
+    --primary: 30 100% 60%; /* Deep Saffron - same as light theme for consistency */
     --primary-foreground: 260 30% 10%;
     
     --secondary: 260 30% 20%;
@@ -68,7 +67,7 @@ body {
     --muted: 260 20% 35%;
     --muted-foreground: 260 15% 65%;
     
-    --accent: 320 80% 60%; /* Vibrant Magenta/Pink */
+    --accent: 225 73% 63%; /* Royal Blue - same as light theme */
     --accent-foreground: 320 20% 98%;
     
     --destructive: 0 62.8% 30.6%;
@@ -76,7 +75,7 @@ body {
     
     --border: 260 20% 25%;
     --input: 260 20% 25%;
-    --ring: 45 100% 60%;
+    --ring: 30 100% 60%;
 
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -100,7 +99,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
   }
   section {
     @apply py-16 md:py-24;
@@ -179,5 +178,20 @@ body {
   
   .animate-sparkle {
     animation: sparkle 2s ease-in-out infinite;
+  }
+  
+  @keyframes glow-border {
+    0%, 100% {
+      border-color: hsl(var(--primary) / 0.5);
+      box-shadow: 0 0 5px hsl(var(--primary) / 0.2);
+    }
+    50% {
+      border-color: hsl(var(--accent) / 1);
+      box-shadow: 0 0 20px hsl(var(--accent) / 0.5);
+    }
+  }
+
+  .animate-glow-border {
+    animation: glow-border 4s ease-in-out infinite;
   }
 }

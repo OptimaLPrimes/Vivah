@@ -8,7 +8,7 @@ export function HeroSection() {
   const weddingDate = "2025-12-12T13:12:00";
 
   return (
-    <section id="home" className="relative h-screen min-h-[800px] w-full flex items-center justify-center text-center text-white p-4">
+    <section id="home" className="relative h-screen min-h-[800px] w-full flex items-center justify-center text-center text-white p-4 dark">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-purple-950 to-rose-950 opacity-90" />
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-[0.03]" />
       
