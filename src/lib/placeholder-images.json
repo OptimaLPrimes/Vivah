@@ -27,7 +27,7 @@
     {
       "id": "venue-map",
       "description": "Placeholder image of a map showing a location.",
-      "imageUrl": "https://images.unsplash.com/photo-1548345680-f5475ea5df84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2NhdGlvbnxlbnwwfHx8fDE3NjIzNTI0MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1618861859575-b6e43d10922a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncHN8ZW58MHx8fHwxNzYyMzUyNTI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map location"
     },
     {
