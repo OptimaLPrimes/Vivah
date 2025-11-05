@@ -49,23 +49,25 @@ export function InvitationSection() {
                         <div className="space-y-1">
                             <p className="font-semibold text-accent">Ms. Vaishnavi</p>
                             <p className="text-muted-foreground text-xs">(Software Developer)</p>
-                            <p>Daughter of  Gangasagar tai and Dr. Harishchandra Sheshrao Patange,</p>
+                            <p>Daughter of Mrs. Sagartai and Dr. Harishchandra Sheshrao Patange Patil,</p>
                             <p className="text-xs text-muted-foreground">(Vice Principal, Yashwant Mahavidyalaya, Nanded)</p>
-                            <p>Granddaughter of Shri. Sheshrao Motiram Patange</p>
-                            <p>Niece of Saraswati Sheshrao Patange, Tq. Himayatnagar, Dist. Nanded</p>
-                        </div>
+                            <p>Grandaughter of Shri. Sheshrao Motiram Patange</p>
+                          <i>  <p> Sonari, Tq. Himayatnagar, Dist. Nanded</p></i>
+
+        
+                             </div>
                          <div className="space-y-1">
                             <p className="font-semibold text-accent">Mr. Suraj</p>
                             <p className="text-muted-foreground text-xs">(Software Developer)</p>
-                            <p>Son of Smt. Nirmaltai and Shri. Janardan Bhimrao Rohile Patil</p>
-                            <p>Grandson of Smt. Banubai Kishor Rohile Patil</p>
-                            <p>Tq. Jawkhed, Dist. Ahmednagar</p>
+                            <p>Son of Smt. Meenatai and Shri. Dnyandeo Balbhim Rode Patil</p>
+                            <p>Grandson of late. Balbhim Kisan Rode Patil</p>
+                            <p><i>Jawala, Tq. Jamkhed, Dist. Ahilyanagar</i></p>
                         </div>
                     </div>
                     
                     <div className="mt-8 pt-6 border-t border-border space-y-4">
                       <p className="text-lg">
-                          request the pleasure of your company at their wedding celebration on
+                      💝
                       </p>
                       <div className="flex items-center justify-center gap-4 font-headline text-2xl md:text-3xl font-bold text-accent">
                         <CalendarDays className="w-8 h-8 text-primary" />
