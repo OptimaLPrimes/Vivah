@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { EnvelopeIcon } from "./icons/envelope-icon";
 import { SealIcon } from "./icons/seal-icon";
+import { AnimatedName } from "./animated-name";
 
 type AnimationStep = "closed" | "opening" | "revealing" | "exiting";
 
@@ -31,7 +32,7 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
   const handleOpen = () => {
     setStep("opening");
     setTimeout(() => setStep("revealing"), 1000);
-    setTimeout(() => setStep("exiting"), 3000);
+    setTimeout(() => setStep("exiting"), 4000); // Increased time for new animation
   };
 
   return (
@@ -44,30 +45,37 @@ export function IntroAnimation({ onFinish }: { onFinish: () => void }) {
       <div className="relative w-[90vw] max-w-lg md:w-[600px]">
         <EnvelopeIcon step={step} />
 
-        {/* Inner Card */}
+        {/* Inner Card Content */}
         <div
           className={cn(
-            "absolute top-0 left-0 w-full h-[55%] bg-card transition-transform duration-1000 ease-in-out",
-            "flex items-center justify-center",
-            step === "revealing" ? "translate-y-[20%]" : "translate-y-[-100%]"
+            "absolute top-[10%] left-0 w-full h-[55%] bg-card transition-transform duration-1000 ease-in-out",
+            "flex flex-col items-center justify-center text-center overflow-hidden",
+            step === "revealing"
+              ? "translate-y-0"
+              : "translate-y-[-120%]",
+            step === "exiting" && "opacity-0"
           )}
-          style={{ transitionDelay: '0.5s' }}
+          style={{ transitionDelay: '0.2s' }}
         >
-          
+          <div className="text-center">
+            <AnimatedName name="Vaishnavi" />
+            <p className="font-headline text-4xl text-muted-foreground my-2">&</p>
+            <AnimatedName name="Suraj" />
+          </div>
         </div>
 
-        {/* Envelope Content & Seal */}
+        {/* Seal */}
         <div
           className={cn(
-            "absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300",
-            step !== "closed" && "opacity-0"
+            "absolute inset-0 flex items-center justify-center transition-all duration-500",
+            step !== "closed" && "opacity-0 scale-150"
           )}
         >
           <div className="absolute top-[48%] transform -translate-y-1/2">
             <SealIcon
               className={cn(
-                "w-20 h-20 text-accent transition-all duration-500",
-                step === "opening" && "opacity-0 scale-150"
+                "w-20 h-20 text-accent animate-pulse",
+                step === "opening" && "animate-none"
               )}
             />
           </div>
