@@ -29,8 +29,9 @@ export function HeroSection() {
 
         <div className="flex gap-4 mt-12">
             <Button 
+                variant="outline"
                 size="lg" 
-                className="group rounded-full bg-gradient-to-r from-primary/80 to-accent/80 text-lg font-bold text-primary-foreground py-7 px-10 border-2 border-primary/50 shadow-lg hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105" 
+                className="group rounded-full bg-transparent text-lg font-bold text-white border-primary/50 hover:bg-primary/20 hover:text-white py-7 px-10 transition-all duration-300"
                 asChild
             >
                 <Link href="#events">

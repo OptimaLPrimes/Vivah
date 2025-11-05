@@ -40,8 +40,8 @@ const events: Event[] = [
   {
     icon: <GlassWater className="h-8 w-8 text-white" />,
     name: "Grand Reception",
-    date: "Friday, 12th Dec 2025",
-    time: "7:30 PM onwards",
+    date: "Saturday, 20th Dec 2025",
+    time: "TBD",
     description: "Celebrate with us at the reception with dinner and dancing.",
   },
 ];
