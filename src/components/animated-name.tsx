@@ -13,12 +13,12 @@ const NameCharacter = ({ char, index }: { char: string; index: number }) => {
 
   return (
     <span
-      className={`font-script text-7xl md:text-9xl font-bold text-background/80 drop-shadow-lg transition-opacity duration-500 animate-breathe ${
-        isAnimated ? "opacity-100" : "opacity-0"
+      className={`font-headline text-7xl md:text-8xl font-bold text-primary transition-all duration-500 transform-gpu ${
+        isAnimated ? "opacity-100 scale-100" : "opacity-0 scale-125"
       }`}
       style={{ 
+        textShadow: '0 0 10px hsl(var(--primary) / 0.7), 0 0 20px hsl(var(--primary) / 0.5), 0 0 35px hsl(var(--primary) / 0.3)',
         transitionDelay: `${index * 50}ms`,
-        animationDelay: `${index * 150}ms` 
       }}
     >
       {char}

@@ -1,8 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Calendar, Clock, Bell, Sparkles } from "lucide-react";
 
 type TimeUnit = "Days" | "Hours" | "Minutes" | "Seconds";
+type UnitIcons = {
+    [key in TimeUnit]: React.ReactNode;
+};
+
+const icons: UnitIcons = {
+    Days: <Calendar className="w-6 h-6" />,
+    Hours: <Clock className="w-6 h-6" />,
+    Minutes: <Bell className="w-6 h-6" />,
+    Seconds: <Sparkles className="w-6 h-6" />,
+};
 
 const calculateTimeLeft = (date: string) => {
   const difference = +new Date(date) - +new Date();
@@ -26,11 +37,12 @@ const calculateTimeLeft = (date: string) => {
 };
 
 const TimeValue = ({ value, unit }: { value: number; unit: TimeUnit }) => (
-  <div className="flex flex-col items-center">
-    <span className="text-4xl md:text-6xl font-bold text-primary tracking-wider">
+  <div className="flex flex-col items-center justify-center w-28 h-28 md:w-32 md:h-32 bg-black/20 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg">
+    <div className="text-primary/80 mb-1">{icons[unit]}</div>
+    <span className="text-3xl md:text-4xl font-bold text-white tracking-wider">
       {String(value).padStart(2, '0')}
     </span>
-    <span className="text-sm md:text-base text-white/80 uppercase tracking-widest">
+    <span className="text-xs text-white/60 uppercase tracking-widest">
       {unit}
     </span>
   </div>
@@ -51,7 +63,7 @@ export const CountdownTimer = ({ date }: { date: string }) => {
   }, [date]);
   
   return (
-    <div className="flex items-center justify-center gap-4 md:gap-8 p-4 rounded-lg bg-black/20 backdrop-blur-sm">
+    <div className="flex items-center justify-center gap-3 md:gap-6">
       {(Object.keys(timeLeft) as TimeUnit[]).map((unit) => (
         <TimeValue key={unit} value={timeLeft[unit]} unit={unit} />
       ))}
