@@ -59,24 +59,25 @@ const EventCard = ({ event, index }: { event: Event; index: number }) => {
       ref={ref}
       className={cn(
         "flex items-center w-full transition-all duration-1000",
-        isEven ? "md:justify-start" : "md:justify-end",
+        "md:justify-start",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}
       style={{ transitionDelay: `${index * 200}ms` }}
     >
-      <div className="md:w-5/12">
+      <div className="md:w-5/12 w-full">
         <Card
           className={cn(
             "shadow-lg border-primary/20 hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300 transform-gpu",
-            "bg-gradient-to-br from-background to-secondary/50 hover:shadow-xl",
-            isEven ? "md:text-right" : "md:text-left"
+            "bg-gradient-to-br from-background to-secondary/50 hover:shadow-xl"
           )}
         >
-          <CardHeader className="flex flex-row-reverse md:flex-row items-center gap-4">
+          <CardHeader className="flex flex-row items-center gap-4">
+            <div className="md:hidden flex bg-primary p-3 rounded-full border-4 border-background shadow-lg">
+              {event.icon}
+            </div>
             <CardTitle
               className={cn(
                 "font-headline text-2xl text-accent flex-1",
-                isEven ? "order-1 md:order-2" : "order-2 md:order-1"
               )}
             >
               {event.name}

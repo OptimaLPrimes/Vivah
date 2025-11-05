@@ -13,7 +13,7 @@ const NameCharacter = ({ char, index }: { char: string; index: number }) => {
 
   return (
     <span
-      className={`font-headline text-7xl md:text-8xl font-bold text-primary transition-all duration-500 transform-gpu ${
+      className={`font-headline text-6xl md:text-8xl font-bold text-primary transition-all duration-500 transform-gpu ${
         isAnimated ? "opacity-100 scale-100" : "opacity-0 scale-125"
       }`}
       style={{ 
@@ -32,7 +32,7 @@ export const AnimatedName = ({ name }: { name: string }) => {
     <div className="flex items-center justify-center flex-wrap">
       {name.split("").map((char, index) =>
         char === " " ? (
-          <div key={index} className="w-4 md:w-6" />
+          <div key={index} className="w-2 md:w-6" />
         ) : (
           <NameCharacter key={index} char={char} index={index} />
         )

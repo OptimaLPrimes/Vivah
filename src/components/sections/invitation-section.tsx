@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, CalendarDays, Clock, MapPin } from "lucide-react";
@@ -69,16 +70,16 @@ export function InvitationSection() {
                       <p className="text-lg">
                       💝
                       </p>
-                      <div className="flex items-center justify-center gap-4 font-headline text-2xl md:text-3xl font-bold text-accent">
-                        <CalendarDays className="w-8 h-8 text-primary" />
+                      <div className="flex items-center justify-center gap-2 md:gap-4 font-headline text-xl md:text-3xl font-bold text-accent">
+                        <CalendarDays className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                         <span>Friday, 12th December 2025</span>
                       </div>
-                       <div className="flex items-center justify-center gap-4 font-headline text-2xl md:text-3xl font-bold text-accent">
-                        <Clock className="w-8 h-8 text-primary" />
+                       <div className="flex items-center justify-center gap-2 md:gap-4 font-headline text-xl md:text-3xl font-bold text-accent">
+                        <Clock className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                         <span>at 1:12 PM</span>
                       </div>
-                      <div className="flex flex-col items-center justify-center gap-2 text-lg">
-                         <MapPin className="w-8 h-8 text-primary" />
+                      <div className="flex flex-col items-center justify-center gap-2 text-base md:text-lg">
+                         <MapPin className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                          <span>at Vitthalrao Deshmukh Mangal Karyalay and Lawns, Nanded</span>
                       </div>
                     </div>
