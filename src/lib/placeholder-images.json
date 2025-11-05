@@ -19,10 +19,10 @@
       "imageHint": "indian pattern"
     },
     {
-      "id": "venue-main",
-      "description": "Grand Indian wedding venue exterior.",
-      "imageUrl": "https://images.unsplash.com/photo-1739047598460-f249269b7708?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjB3ZWRkaW5nJTIwdmVudWV8ZW58MHx8fHwxNzYxMDY0NDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "indian wedding venue"
+      "id": "gallery-custom",
+      "description": "The couple sitting together outdoors.",
+      "imageUrl": "https://storage.googleapis.com/aifirebase-7a052.appspot.com/user-uploads/request-1719515655184-754641662/image-1.jpeg",
+      "imageHint": "couple outdoors"
     },
     {
       "id": "gallery-1",
