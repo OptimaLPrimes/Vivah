@@ -45,7 +45,6 @@ export default function Home() {
       <ScrollAnimator><HeroSection /></ScrollAnimator>
       <ScrollAnimator><InvitationSection /></ScrollAnimator>
       <ScrollAnimator><EventsSection /></ScrollAnimator>
-      <ScrollAnimator><PhotoSection imageId="couple-hero" /></ScrollAnimator>
       <ScrollAnimator><VenueSection /></ScrollAnimator>
       <ScrollAnimator><PhotoSection imageId="couple-portrait" /></ScrollAnimator>
       <ScrollAnimator><GallerySection /></ScrollAnimator>
