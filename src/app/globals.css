@@ -39,7 +39,7 @@
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    -sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
@@ -130,52 +130,6 @@
     animation: draw-in 3s ease-in-out forwards;
   }
 
-  @keyframes draw-letter {
-    from {
-      stroke-dashoffset: 300;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  .animate-draw-letter {
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-    animation: draw-letter 1s ease-out forwards;
-    fill-opacity: 0;
-    animation-fill-mode: forwards;
-  }
-
-  .animate-draw-letter-fill {
-    animation-delay: 0.5s; /* Delay fill to start after drawing */
-    animation: fill-letter 0.5s ease-out forwards;
-  }
-
-  @keyframes fill-letter {
-    from {
-      fill-opacity: 0;
-    }
-    to {
-      fill-opacity: 1;
-    }
-  }
-
-  @keyframes sparkle {
-    0%, 100% {
-      opacity: 0;
-      transform: scale(0.5) rotate(0deg);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.5) rotate(180deg);
-    }
-  }
-  
-  .animate-sparkle {
-    animation: sparkle 2s ease-in-out infinite;
-  }
-  
   @keyframes glow-border {
     0%, 100% {
       border-color: hsl(var(--primary) / 0.5);
@@ -189,5 +143,66 @@
 
   .animate-glow-border {
     animation: glow-border 4s ease-in-out infinite;
+  }
+
+  /* Blooming Lotus Animation */
+  @keyframes bloom-petal {
+    from {
+      transform: scale(0.8) rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) rotate(var(--petal-rotation));
+      opacity: 1;
+    }
+  }
+  
+  .animate-bloom-petal {
+    transform-origin: bottom center;
+    animation: bloom-petal 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  
+  @keyframes reveal-names {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-reveal-names {
+    animation: reveal-names 1.5s ease-out forwards;
+    animation-delay: 1s; /* Start after petals start blooming */
+  }
+
+  @keyframes glow-text-soft {
+    0%, 100% {
+      text-shadow: 0 0 8px hsl(var(--primary) / 0.6), 0 0 16px hsl(var(--primary) / 0.4);
+    }
+    50% {
+      text-shadow: 0 0 16px hsl(var(--primary) / 0.8), 0 0 32px hsl(var(--primary) / 0.6);
+    }
+  }
+
+  .animate-glow-text-soft {
+    animation: glow-text-soft 3s ease-in-out infinite;
+  }
+
+  @keyframes fade-out-intro {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .animate-fade-out-intro {
+    animation: fade-out-intro 1s ease-in forwards;
+    animation-delay: 3.5s;
   }
 }
