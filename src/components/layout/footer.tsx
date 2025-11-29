@@ -41,7 +41,7 @@ export function Footer() {
                 &copy; {year} Vaishnavi & Suraj. All rights reserved.
             </p>
              <p className="text-muted-foreground text-xs mt-2">
-                Crafted with love by Firebase Studio.
+                Crafted with love by Gajanan.
             </p>
         </div>
     </footer>
