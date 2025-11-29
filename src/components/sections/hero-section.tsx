@@ -18,8 +18,10 @@ export function HeroSection() {
           ॥ श्री गणेशाय नमः ॥
         </h1>
         
-        <div className="my-2">
-          <AnimatedName name="Vaishnavi & Suraj" />
+        <div className="my-2 flex flex-col items-center">
+          <AnimatedName name="Vaishnavi" />
+          <span className="font-headline text-4xl md:text-6xl text-primary/80 my-1 md:my-2">&</span>
+          <AnimatedName name="Suraj" />
         </div>
 
         <p className="font-body text-base md:text-xl font-semibold text-foreground/80 mb-6">
