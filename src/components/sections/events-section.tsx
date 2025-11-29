@@ -52,19 +52,16 @@ const EventCard = ({ event, index }: { event: Event; index: number }) => {
     threshold: 0.2,
   });
 
-  const isEven = index % 2 === 0;
-
   return (
     <div
       ref={ref}
       className={cn(
         "flex items-center w-full transition-all duration-1000",
-        "md:justify-start",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       )}
       style={{ transitionDelay: `${index * 200}ms` }}
     >
-      <div className="md:w-5/12 w-full">
+      <div className="w-full">
         <Card
           className={cn(
             "shadow-lg border-primary/20 hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300 transform-gpu",
@@ -72,7 +69,7 @@ const EventCard = ({ event, index }: { event: Event; index: number }) => {
           )}
         >
           <CardHeader className="flex flex-row items-center gap-4">
-            <div className="md:hidden flex bg-primary p-3 rounded-full border-4 border-background shadow-lg">
+            <div className="flex bg-primary p-3 rounded-full border-4 border-background shadow-lg">
               {event.icon}
             </div>
             <CardTitle
@@ -89,9 +86,6 @@ const EventCard = ({ event, index }: { event: Event; index: number }) => {
             <p>{event.description}</p>
           </CardContent>
         </Card>
-      </div>
-      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 bg-primary p-3 rounded-full border-4 border-background shadow-lg">
-        {event.icon}
       </div>
     </div>
   );
@@ -114,9 +108,16 @@ export function EventsSection() {
         <div className="relative">
           <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-primary/20 via-primary to-primary/20 -translate-x-1/2 hidden md:block" />
           
-          <div className="space-y-12">
+          <div className="space-y-12 md:space-y-0 md:grid md:grid-cols-1 md:gap-y-12">
             {events.map((event, index) => (
-              <EventCard key={event.name} event={event} index={index} />
+              <div key={event.name} className="md:relative">
+                <div className={cn("md:w-5/12", index % 2 === 0 ? 'md:ml-auto md:pr-8' : 'md:mr-auto md:pl-8')}>
+                  <EventCard event={event} index={index} />
+                </div>
+                 <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-primary p-3 rounded-full border-4 border-background shadow-lg">
+                  {event.icon}
+                </div>
+              </div>
             ))}
           </div>
         </div>
