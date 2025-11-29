@@ -18,10 +18,10 @@ type Event = {
 const events: Event[] = [
   {
     icon: <Paintbrush className="h-8 w-8 text-white" />,
-    name: "Mehndi Ceremony",
+    name: "Haldi Ceremony",
     date: "Thursday, 11th Dec 2025",
-    time: "4:00 PM onwards",
-    description: "An evening of henna, folk music, and joyous celebrations.",
+    time: "7 PM onwards",
+    description: "A traditional ceremony where turmeric paste is applied to the bride and groom for a golden glow.",
   },
   {
     icon: <Music className="h-8 w-8 text-white" />,
@@ -65,7 +65,7 @@ const EventCard = ({ event, index }: { event: Event; index: number }) => {
         <Card
           className={cn(
             "shadow-lg border-primary/20 hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300 transform-gpu",
-            "bg-gradient-to-br from-background to-secondary/50 hover:shadow-xl"
+            "bg-gradient-to-br from-background to-secondary/50 hover:shadow-xl w-full"
           )}
         >
           <CardHeader className="flex flex-row items-center gap-4">
@@ -94,7 +94,7 @@ const EventCard = ({ event, index }: { event: Event; index: number }) => {
 
 export function EventsSection() {
   return (
-    <section id="events" className="bg-background">
+    <section id="events" className="bg-background w-full">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl mb-4 text-primary">
@@ -110,8 +110,8 @@ export function EventsSection() {
           
           <div className="space-y-12 md:space-y-0 md:grid md:grid-cols-1 md:gap-y-12">
             {events.map((event, index) => (
-              <div key={event.name} className="md:relative">
-                <div className={cn("md:w-5/12", index % 2 === 0 ? 'md:ml-auto md:pr-8' : 'md:mr-auto md:pl-8')}>
+              <div key={event.name} className="md:relative flex justify-center">
+                <div className={cn("md:w-5/12 w-full", index % 2 === 0 ? 'md:ml-auto md:pr-8' : 'md:mr-auto md:pl-8')}>
                   <EventCard event={event} index={index} />
                 </div>
                  <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-primary p-3 rounded-full border-4 border-background shadow-lg">
