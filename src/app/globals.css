@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  cursor: url('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/marigold_24.png'), auto;
-}
-
 @layer base {
   :root {
     --background: 50 50% 94%; /* Very Pale Yellow */
