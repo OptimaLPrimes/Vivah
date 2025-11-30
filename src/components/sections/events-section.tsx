@@ -18,17 +18,10 @@ type Event = {
 const events: Event[] = [
   {
     icon: <Paintbrush className="h-8 w-8 text-white" />,
-    name: "Haldi Ceremony",
+    name: "Haldi & Sangeet",
     date: "Thursday, 11th Dec 2025",
     time: "7 PM onwards",
-    description: "A traditional ceremony where turmeric paste is applied to the bride and groom for a golden glow.",
-  },
-  {
-    icon: <Music className="h-8 w-8 text-white" />,
-    name: "Sangeet Night",
-    date: "Thursday, 11th Dec 2025",
-    time: "7:00 PM onwards",
-    description: "Join us for a night of music, dance performances, and fun!",
+    description: "Join us for an evening of turmeric, music, and dance as we kick off the celebrations.",
   },
   {
     icon: <HeartHandshake className="h-8 w-8 text-white" />,
