@@ -2,7 +2,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { HeartHandshake, Music, Paintbrush, GlassWater } from "lucide-react";
+import { HeartHandshake, Music, Paintbrush } from "lucide-react";
 import { ReactNode } from "react";
 import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
@@ -36,13 +36,6 @@ const events: Event[] = [
     date: "Friday, 12th Dec 2025",
     time: "1:12 PM",
     description: "The auspicious wedding ceremony where we tie the knot.",
-  },
-  {
-    icon: <GlassWater className="h-8 w-8 text-white" />,
-    name: "Grand Reception",
-    date: "Saturday, 20th Dec 2025",
-    time: "TBD",
-    description: "Celebrate with us at the reception with dinner and dancing.",
   },
 ];
 
